@@ -1,0 +1,54 @@
+<html>
+<head><title>Adminisrator Login Window</title>
+<link rel=stylesheet href="styles.css" type="text/css">
+<script language="javascript">
+function fun()
+{
+var id=document.getElementById("id").value;
+var pwd=document.getElementById("pwd").value;
+if(id=="" || pwd=="")
+{
+ alert("Invalid Id/Password");
+}
+else
+{
+ window.open("./checkuser.jsp?id="+id+"&pwd="+pwd);
+}
+}
+
+function rem()
+{
+alert("erase");
+document.getElementById("id").value="";
+document.getElementById("password").value="";
+}
+
+</script>
+</head>
+<body background="20.jpg">
+<p align="center"><b><font size="5" face="Comic Sans MS">Student Information 
+System </font><font face="Comic Sans MS" size="2"><br>
+Student Zone</font></b></p>
+<table border="1" cellpadding="2" cellspacing="2" width="300" align="center" bordercolor="gray">
+<tr>
+<td style="color:white; background-color:gray"><b>Login </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.netspiderpk.cjb.com" target="_blank"><img src="lock.gif" alt="Protected by Net Spider Development" border="0"></a></td>
+</tr>
+<tr>
+<td style="color:gray">&nbsp;<form name="passwordform0">
+User ID&nbsp;&nbsp;&nbsp;:<input name="id" id="id" size="25" style="color:gray; background-color:silver; border-style:dotted; border-width:1px; border-color:gray">
+</form>
+<form name="passwordform">
+Password:<input name="pwd" id="pwd" type="password" size="25" style="color:gray; background-color:silver; border-style:dotted; border-width:1px; border-color:gray">
+</form>
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000">
+<img border="0" id="url" src="login_spy.gif" width="115" height="35" onclick="fun()">
+<a href="./login1.html" onclick="rem()"><img border="0" src="reset_spy.gif" width="115" height="35"></a>
+<a href="./registration11.jsp"><img border="0" src="4.jpg" width="100" height="80"></a></td>
+</tr>
+
+</table>
+</body>
+</html>
